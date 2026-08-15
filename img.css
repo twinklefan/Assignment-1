@@ -3,10 +3,10 @@
 /* ******************* */
 
 /* The Image */
-div.img img {
+/* div.img img {
   width: 100%;
   height: auto;
-}
+} */
 
 /* Add Responsiveness */
 img {
@@ -39,12 +39,12 @@ img {
 }
 
 /* Add Animation */
-.modal-content, #caption {  
+/* .modal-content, #caption {  
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
   animation-duration: 0.6s;
-}
+} */
 
 @-webkit-keyframes zoom {
   from {transform:scale(0)} 
@@ -89,4 +89,11 @@ img {
   .responsive {
     width: 100%;
   }
+}
+
+/* when hover */
+img:hover {
+  box-shadow: var(--border-shadow);
+  width: 81%
+  /* border: 1px solid #777; */
 }

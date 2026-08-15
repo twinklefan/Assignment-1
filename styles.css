@@ -4,7 +4,7 @@
   --color-lightmode-elevation: hsl(192, 71%, 93%);
 
   --color-lightmode-shadow: grey;
-  --color-darkmode-shadow: black;
+  --color-darkmode-shadow: rgb(227, 227, 227, 0.5);
 
   --color-darkmode-background: hsl(211, 72%, 28%);
   --color-darkmode-text: hsl(208, 38%, 87%);
@@ -16,24 +16,16 @@
 
   --font-stack: "Libre Franklin", sans-serif;
   --type-scale: 1.333;
-  --font-s: 18px;
+  --font-s: 24px;
   --font-m: calc(var(--font-s) * var(--type-scale));
   --font-l: calc(var(--font-m) * var(--type-scale));
   --font-xl: calc(var(--font-l) * var(--type-scale));
   --font-xxl: calc(var(--font-xl) * var(--type-scale));
+  --font-xxxl: calc(var(--font-xxl) * var(--type-scale));
 
   --border-radius: 12px;
 
   --border-shadow: 3px 3px 5px 1px var(--color-lightmode-shadow);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: var(--color-darkmode-background);
-    --color-text: var(--color-darkmode-text);
-    --color-elevation: var(--color-darkmode-elevation);
-    --border-shadow: 4px 4px 0 var(--color-darkmode-shadow);
-  }
 }
 
 html {
@@ -41,6 +33,18 @@ html {
   background-color: white;
   margin: 0;
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--color-darkmode-background);
+    --color-text: var(--color-darkmode-text);
+    --color-elevation: var(--color-darkmode-elevation);
+    --border-shadow: 4px 4px 0 var(--color-darkmode-shadow);
+  }
+  html {
+    background-color: rgb(7, 3, 39);
+  }
+}
+
 
 body {
   background-color: var(--color-background);
@@ -54,15 +58,34 @@ body {
   box-shadow: var(--border-shadow)
 }
 
+@media (max-width:600px) {
+  :root {
+    /* --font-xxxl: var(--font-xxl);  */
+    --font-l: var(--font-m);
+    --font-s: 18px;
+  }
+  html {
+    padding: 0px;
+    /* background-color: rgb(92, 74, 232); */
+  }
+  body {
+    padding: 30px;
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
+
+  }
+}
+
 h1 {
-  font-size: var(--font-xxl);
+  font-size: var(--font-xxxl);
   font-weight: 900;
   text-wrap: balance;
   margin: 60px 20px;
   font-family: "MuseoModerno", Verdana , sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-size: 5rem;
+  /* font-size: 5rem; */
 }
 
 h3 {
@@ -76,14 +99,12 @@ h3 {
 
 p, li {
   margin: 20px 20px;
-  font-size: var(--font-m);
+  font-size: var(--font-s);
   line-height: var(--type-scale);
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
 }
 
 hr {
@@ -95,4 +116,17 @@ hr {
 
 img {
   border-radius: 25px;
+}
+
+
+/* Screen readers */
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
