@@ -13,6 +13,11 @@ img {
     cursor: pointer;
   /* float: left; */
   /* width: 54.99999%; */
+  width: 80%;
+  max-width: 900px;
+  display: block;
+  /* box-shadow: var(--border-shadow); */
+  margin: 0 auto 20px auto;
 }
 
 /* The Modal (background) */
