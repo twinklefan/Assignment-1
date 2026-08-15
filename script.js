@@ -27,5 +27,10 @@ images[i].onclick = function () {
     captionText.innerHTML = this.nextElementSibling.innerHTML;
     // stops page from scrolling when image is enlarged
     html.style.overflow = "hidden";
+    // ignore hover styles
+    modalImg.style.cursor = "default";
+    modalImg.style.opacity = "1";
+    modalImg.style.transform = "none";
+    modalImg.style.boxShadow = "none";
 };
 }
