@@ -1,0 +1,98 @@
+:root {
+  --color-lightmode-background: hsl(208, 38%, 87%);
+  --color-lightmode-text: hsl(211, 72%, 28%);
+  --color-lightmode-elevation: hsl(192, 71%, 93%);
+
+  --color-lightmode-shadow: grey;
+  --color-darkmode-shadow: black;
+
+  --color-darkmode-background: hsl(211, 72%, 28%);
+  --color-darkmode-text: hsl(208, 38%, 87%);
+  --color-darkmode-elevation: hsl(236, 88%, 20%);
+
+  --color-background: var(--color-lightmode-background);
+  --color-text: var(--color-lightmode-text);
+  --color-elevation: var(--color-lightmode-elevation);
+
+  --font-stack: "Libre Franklin", sans-serif;
+  --type-scale: 1.333;
+  --font-s: 18px;
+  --font-m: calc(var(--font-s) * var(--type-scale));
+  --font-l: calc(var(--font-m) * var(--type-scale));
+  --font-xl: calc(var(--font-l) * var(--type-scale));
+  --font-xxl: calc(var(--font-xl) * var(--type-scale));
+
+  --border-radius: 12px;
+
+  --border-shadow: 3px 3px 5px 1px var(--color-lightmode-shadow);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--color-darkmode-background);
+    --color-text: var(--color-darkmode-text);
+    --color-elevation: var(--color-darkmode-elevation);
+    --border-shadow: 4px 4px 0 var(--color-darkmode-shadow);
+  }
+}
+
+html {
+  padding: 40px 80px;
+  background-color: white;
+  margin: 0;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1;
+  font-family: var(--font-stack);
+  font-optical-sizing: auto;
+  font-style: normal;
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: var(--border-shadow)
+}
+
+h1 {
+  font-size: var(--font-xxl);
+  font-weight: 900;
+  text-wrap: balance;
+  margin: 60px 20px;
+  font-family: "MuseoModerno", Verdana , sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 5rem;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: var(--font-l);
+  margin: 40px 20px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+p, li {
+  margin: 20px 20px;
+  font-size: var(--font-m);
+  line-height: var(--type-scale);
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  border-top: 2px dashed white;
+  
+}
+
+img {
+  border-radius: 15px;
+}
