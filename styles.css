@@ -1,19 +1,28 @@
 :root {
-  --color-lightmode-background: hsl(208, 38%, 87%);
-  --color-lightmode-text: hsl(211, 72%, 28%);
-  --color-lightmode-elevation: hsl(192, 71%, 93%);
+  --color1: #14467B;
+  --color2: #1663B3;
+  --color3: #7EBAF9;
+  --color4: #D1DFEA;
+  --color5: #E0F5FA;
+  
+  --color-lightmode-background: var(--color4);
+  --color-lightmode-text: var(--color1);
+  --color-lightmode-elevation: var(--color5);
+  --color-lightmode-highlight:var(--color5);
 
   --color-lightmode-shadow: grey;
   --color-darkmode-shadow: rgb(227, 227, 227, 0.5);
 
-  --color-darkmode-background: hsl(211, 72%, 28%);
-  --color-darkmode-text: hsl(208, 38%, 87%);
+  --color-darkmode-background: var(--color1);
+  --color-darkmode-text: var(--color4);
   --color-darkmode-elevation: hsl(236, 88%, 20%);
+  --color-darkmode-highlight:var(--color2);
 
   --color-background: var(--color-lightmode-background);
   --color-text: var(--color-lightmode-text);
   --color-elevation: var(--color-lightmode-elevation);
-
+  --color-highlight: var(--color-lightmode-highlight);
+  
   --font-stack: "Libre Franklin", sans-serif;
   --type-scale: 1.333;
   --font-s: 24px;
@@ -22,9 +31,9 @@
   --font-xl: calc(var(--font-l) * var(--type-scale));
   --font-xxl: calc(var(--font-xl) * var(--type-scale));
   --font-xxxl: calc(var(--font-xxl) * var(--type-scale));
-
+  
   --border-radius: 12px;
-
+  
   --border-shadow: 3px 3px 5px 1px var(--color-lightmode-shadow);
 }
 
@@ -39,6 +48,7 @@ html {
     --color-text: var(--color-darkmode-text);
     --color-elevation: var(--color-darkmode-elevation);
     --border-shadow: 4px 4px 0 var(--color-darkmode-shadow);
+    --color-highlight: var(--color-darkmode-highlight);
   }
   html {
     background-color: rgb(7, 3, 39);
@@ -97,14 +107,38 @@ h3 {
   font-style: normal;
 }
 
-p, li {
+ul, ol, p, a {
   margin: 20px 20px;
   font-size: var(--font-s);
   line-height: var(--type-scale);
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 200;
+  color: var(--color-text);
+
+}
+ul > li {
   font-style: normal;
+}
+ol > li, ol > li > a {
+  font-size: 18px;
+}
+ol > li:hover a {
+  background-color: var(--color-highlight);
+  padding: 0 4px;
+}
+
+ol > li a:visited {
+  color: var(--color-text);
+}
+
+
+blockquote {
+  font-family: "Open Sans", sans-serif;
+  font-size: var(--font-s);
+  font-weight: 100;
+  font-style: italic;
+
 }
 
 hr {
