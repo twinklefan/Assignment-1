@@ -1,18 +1,11 @@
-/* ******************* */
-/* CODE FROM W3SCHOOLS AND EDITIED */
-/* ******************* */
+/* ************************************************************* */
+/* CODE FROM W3SCHOOLS AND EDITIED to enlarge image when clicked */
+/* ************************************************************* */
 
-/* The Image */
-/* div.img img {
-  width: 100%;
-  height: auto;
-} */
 
 /* Add Responsiveness */
 img {
-    cursor: pointer;
-  /* float: left; */
-  /* width: 54.99999%; */
+  cursor: pointer;
   width: 80%;
   max-width: 900px;
   display: block;
@@ -44,12 +37,12 @@ img {
 }
 
 /* Add Animation */
-/* .modal-content, #caption {  
+.modal-content {  
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
   animation-duration: 0.6s;
-} */
+}
 
 @-webkit-keyframes zoom {
   from {transform:scale(0)} 

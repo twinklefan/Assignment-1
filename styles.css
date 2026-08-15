@@ -118,8 +118,12 @@ img {
   border-radius: 25px;
 }
 
+strong {
+  font-weight: 600;
+}
 
-/* Screen readers */
+
+/* Screen readers text, hide from website view */
 .sr {
   position: absolute;
   width: 1px;
@@ -131,7 +135,3 @@ img {
   border: 0;
 }
 
-/* Container box for map section */
-/* .map_box {
-  padding: 0;
-} */
