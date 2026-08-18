@@ -158,6 +158,7 @@ strong {
 
 
 /* Screen readers text, hide from website view */
+/* code from online */
 .sr {
   position: absolute;
   width: 1px;
