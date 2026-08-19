@@ -38,7 +38,7 @@
 }
 
 html {
-  padding: 40px 80px;
+  padding: 60px 120px;
   background-color: white;
   margin: 0;
 }
@@ -68,7 +68,7 @@ body {
   box-shadow: var(--border-shadow)
 }
 
-@media (max-width:600px) {
+@media (max-width:700px) {
   :root {
     /* --font-xxxl: var(--font-xxl);  */
     --font-l: var(--font-m);
@@ -169,4 +169,3 @@ strong {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-
